@@ -2,30 +2,25 @@
   "manifest_version": 2,
   "name": "Show The Image",
   "description": "Press Ctrl/Cmd+Q to show the largest image in the page",
-  "version": "1.0",
+  "version": "0.1.0",
   "browser_action": {
     "default_icon": "icon.png"
   },
-  "content_scripts": [
-    {
-      "matches": [
-        "<all_urls>"
-      ],
-      "js": [
-        "js/vendor.js",
-        "js/content.js"
-      ]
-    }
-  ],
   "background": {
     "scripts": [
-      "js/vendor.js",
       "js/background.js"
     ],
     "persistent": false
   },
+  "commands": {
+    "show-the-image": {
+      "suggested_key": {
+        "default": "Ctrl+Q"
+      },
+      "description": "Key for showing the largest image and going back to original page"
+    }
+  },
   "permissions": [
-    "tabs",
-    "<all_urls>"
+    "activeTab"
   ]
 }

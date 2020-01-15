@@ -22,7 +22,6 @@ const config: Configuration = {
           chunks: 'initial',
           name: 'vendor',
           test: /node_modules/,
-          enforce: true,
         },
       },
     },

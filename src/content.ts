@@ -1,7 +1,6 @@
-import hotkeys from 'hotkeys-js';
 import { getImageWrapperLink, getLargestImage, getSiblingLinkInTree } from './lib/img-utils';
 
-hotkeys('ctrl+q,command+q', () => {
+(() => {
   // first check if we now show the image and so we can go back to original page
   const bodyChildren = document.body.children;
   if (bodyChildren.length === 1 && bodyChildren[0].tagName.toLowerCase() === 'img') {
@@ -23,4 +22,4 @@ hotkeys('ctrl+q,command+q', () => {
       src: imageWrapperLink || siblingLink || largestImage.src,
     });
   }
-});
+})();

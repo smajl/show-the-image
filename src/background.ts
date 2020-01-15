@@ -12,3 +12,11 @@ chrome.runtime.onMessage.addListener((request, _sender, _sendResponse) => {
 
   return isResponseAsync;
 });
+
+chrome.commands.onCommand.addListener((command) => {
+  if (command === 'show-the-image') {
+    chrome.tabs.executeScript({
+      file: 'js/content.js',
+    });
+  }
+});
