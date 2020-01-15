@@ -58,7 +58,8 @@ export function getSiblingLinkInTree(image: HTMLImageElement, levels = 1): Maybe
 
     links.forEach((link) => {
       const linkUrl = link.getAttribute('href');
-      if (linkUrl) {
+      // try to avoid page links containing the image name
+      if (linkUrl && !linkUrl.match(/html?/)) {
         const linkFilename = getFilenameExtFromUrl(linkUrl).filename;
 
         if (linkFilename && linkFilename.includes(imgFilename)) {
