@@ -1,7 +1,7 @@
 {
   "manifest_version": 2,
   "name": "Show The Image",
-  "description": "Shows the largest image in the page or tries to find a link leading to a larger version",
+  "description": "Press Ctrl/Cmd+Q to show the largest image in the page",
   "version": "1.0",
   "browser_action": {
     "default_icon": "icon.png"
