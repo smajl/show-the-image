@@ -6,7 +6,7 @@
   "scripts": {
     "lint": "eslint --ext .ts,.js --ignore-path .gitignore .",
     "watch": "webpack --config webpack/webpack.dev.ts --watch",
-    "build": "webpack --config webpack/webpack.prod.ts",
+    "build": "npm run clean && webpack --config webpack/webpack.prod.ts",
     "start": "npm run watch",
     "clean": "rimraf dist"
   },
@@ -25,6 +25,7 @@
     "@types/node": "^13.1.7",
     "@types/webpack": "^4.41.2",
     "@types/webpack-merge": "^4.1.5",
+    "@types/zip-webpack-plugin": "^3.0.0",
     "@typescript-eslint/eslint-plugin": "^2.16.0",
     "@typescript-eslint/parser": "^2.16.0",
     "babel-loader": "^8.0.6",
@@ -38,6 +39,7 @@
     "typescript": "^3.7.4",
     "webpack": "^4.41.5",
     "webpack-cli": "^3.3.10",
-    "webpack-merge": "^4.2.2"
+    "webpack-merge": "^4.2.2",
+    "zip-webpack-plugin": "^3.0.0"
   }
 }

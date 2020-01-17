@@ -12,7 +12,7 @@ const config: Configuration = {
     content: path.join(__dirname, srcDir + 'content.ts'),
   },
   output: {
-    path: path.join(__dirname, '../dist/js'),
+    path: path.join(__dirname, '../dist'),
     filename: '[name].js',
   },
   optimization: {
@@ -38,7 +38,7 @@ const config: Configuration = {
   resolve: {
     extensions: ['.ts', '.tsx', '.js', '.jsx'],
   },
-  plugins: [new CopyPlugin([{ from: '.', to: '../' }], { context: 'public' })],
+  plugins: [new CopyPlugin([{ from: '.', to: '.' }], { context: 'public' })],
 };
 
 export default config;
