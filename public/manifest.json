@@ -2,7 +2,7 @@
   "manifest_version": 2,
   "name": "Show The Image",
   "description": "Press Ctrl/Cmd+Q to show the largest image in the page",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "icons": {
     "16": "icon_16.png",
     "48": "icon_48.png",
