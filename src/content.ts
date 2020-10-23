@@ -3,7 +3,7 @@ import { getImageWrapperLink, getLargestImage, getSiblingLinkInTree } from './li
 (() => {
   // first check if we now show the image and so we can go back to original page
   const bodyChildren = document.body.children;
-  if (bodyChildren.length === 1 && bodyChildren[0].tagName.toLowerCase() === 'img') {
+  if (bodyChildren.length > 0 && bodyChildren[0].tagName.toLowerCase() === 'img') {
     window.history.back();
     return;
   }
