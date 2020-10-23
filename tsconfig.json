@@ -7,7 +7,8 @@
     "noEmitOnError": true,
     "sourceMap": true,
     "target": "es6",
-    "strict": true
+    "strict": true,
+    "skipLibCheck": true
   },
   "exclude": ["node_modules"],
   "include": ["src", "typings"]

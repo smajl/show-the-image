@@ -1,12 +1,16 @@
+// eslint-disable-next-line @typescript-eslint/triple-slash-reference
+///<reference path="../typings/filemanager-webpack-plugin.d.ts"/>
 import merge from 'webpack-merge';
-import ZipPlugin from 'zip-webpack-plugin';
+import FileManagerPlugin from 'filemanager-webpack-plugin';
 import common from './webpack.common';
 
 const config = merge(common, {
   mode: 'production',
   plugins: [
-    new ZipPlugin({
-      filename: 'dist.zip',
+    new FileManagerPlugin({
+      onEnd: {
+        archive: [{ source: 'dist', destination: 'dist.zip' }],
+      },
     }),
   ],
 });

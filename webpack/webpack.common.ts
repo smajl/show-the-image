@@ -38,7 +38,7 @@ const config: Configuration = {
   resolve: {
     extensions: ['.ts', '.tsx', '.js', '.jsx'],
   },
-  plugins: [new CopyPlugin([{ from: '.', to: '.' }], { context: 'public' })],
+  plugins: [new CopyPlugin({ patterns: [{ from: '.', to: '.', context: 'public' }] })],
 };
 
 export default config;
